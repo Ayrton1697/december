@@ -1,4 +1,4 @@
-<p align="center"><a href="https://decemberlabs.com/" target="_blank"><img src="https://decemberlabs.com/img/bg_logo_dl.svg" width="400" style="background-color:black"></a></p>
+<p align="center"><a href="https://decemberlabs.com/" target="_blank"><img src="https://decemberlabs.com/img/logo_footer.svg" width="400" style="background-color:black"></a></p>
 
 
 
