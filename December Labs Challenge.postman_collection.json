@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "3e561de4-3e5e-44a3-b9bf-bd526f9ce6f9",
+		"name": "December Labs Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "account_from",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "account_to",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "account_from_currency",
+							"value": "'UYU'",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "account_to_currency",
+							"value": "'UYU'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions filtered by Source Account ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions?SourceAccountID=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "SourceAccountID",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions filtered by FROM date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions?from=2022-05-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-05-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions filtered by TO date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions?to=2022-05-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "to",
+							"value": "2022-05-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions filtered by FROM to TO date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions?from=2022-01-01&to=2022-05-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-01-01"
+						},
+						{
+							"key": "to",
+							"value": "2022-05-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions filtered by Source Account ID, between FROM and TO date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/december/december-challenge/public/transactions?from=2022-01-01&to=2022-05-10&SourceAccountID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"december",
+						"december-challenge",
+						"public",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-01-01"
+						},
+						{
+							"key": "to",
+							"value": "2022-05-10"
+						},
+						{
+							"key": "SourceAccountID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

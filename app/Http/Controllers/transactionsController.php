@@ -25,7 +25,6 @@ class transactionsController extends Controller
 
     public function index(Request $request){
 
-        //dd();
         // MIDDLEWARE USER
 
         if(isset($request->SourceAccountID)){
