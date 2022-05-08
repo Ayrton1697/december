@@ -25,6 +25,7 @@ class TransactionFactory extends Factory
         return [
             
             'amount' => $this->faker->randomFloat(2, 0, 10000),
+            'description' => $this->faker->sentence(),
             'account_from' => $accounts_1,
             'account_to' => $accounts_2,
             'account_from_currency' => $accounts_1_currency,
